@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/main_style.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>{{ site.title | escape }}</h1>
+      <img class="profile_pic" src="/assets/aymen.jpg" >
+    </div>
+      <div class="container">
+        {{ content }}
+        {% if site.footer == true %}
+        <p style="text-align: center; margin-bottom: 10px">
+        <small>{{ site.footer_text }}</small>
+        </p>
+        {% endif %}
+      </div><!-- /.container -->
+  </body>
+  <footer>
+  </footer>
+</html>

@@ -1,1 +1,19 @@
-theme: jekyll-theme-hacker
+title: Aymen Boudguiga
+baseurl: "/aymen0b"
+
+author:
+  name: Aymen Boudguiga
+  email: aymen.boudguiga[@]gmail.com
+  github: aymen0b
+  linkedin: aymen0b
+  profile_picture: aymen.jpg
+
+markdown: kramdown
+
+footer: yes
+footer_text: "Last update 08.10.2020"
+
+sass:
+    style: compressed
+    sass_dir: _sass
+

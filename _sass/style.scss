@@ -1,0 +1,77 @@
+$title_color: #B89FBF;
+$font_color: #1B2226;
+$h1_color: #1F1E26;
+$h2_color: #464B59;
+$h3_color: #9CA1A6;
+$alink_color: #026873;
+$ahover_color: #025E73;
+$text_width: 960px;
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #FFFFFF;
+  font-family: Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: $font_color;
+  margin: 5% 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+h1 {
+  font-family: Helvetica neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  color: $h1_color;
+  font-size: 30px;
+}
+
+h2 {
+  font-family: Helvetica neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  color: $h2_color;
+  font-size: 26px;
+}
+
+h3 {
+  font-family: Helvetica neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  color: $h3_color;
+  font-size: 22px;
+}
+
+a:link {
+  color: $alink_color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $ahover_color;
+  text-decoration: none;
+}
+
+.header {
+  width: $text_width;
+  margin: auto;
+  .profile_pic {
+    height: 128px;
+    width: 128px;
+    position: relative;
+    margin: 30px 30px 0 10px;
+    float: right;
+    border-radius: 50%;
+  }
+}
+
+.container {
+  width: $text_width;
+  margin: auto;
+}
+
