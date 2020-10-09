@@ -5,18 +5,26 @@
     <link rel="stylesheet" type="text/css" href="/css/main_style.css">
   </head>
   <body>
-    <div class="header">
+    <div class="header_box">
+    <div class="header_left">
       <h1>{{ site.title | escape }}</h1>
-      <img class="profile_pic" src="/assets/aymen.jpg" >
+      <div class="navigator">
+        <div class="linkedin"><a href="https://www.linkedin.com/in/aymen0b/"><img class="linkedin_pic" src="/assets/linkedin.svg"></a></div>
+        <div class="github"><a href="https://github.com/aymen0b"><img class="github_pic" src="/assets/github.svg"></a></div>
+      </div>
     </div>
-      <div class="container">
-        {{ content }}
-        {% if site.footer == true %}
-        <p style="text-align: center; margin-bottom: 10px">
-        <small>{{ site.footer_text }}</small>
-        </p>
-        {% endif %}
-      </div><!-- /.container -->
+    <div class="header_right">
+      <img class="profile_pic" src="/assets/aymen.jpg">
+    </div>
+    </div>
+    <div class="container">
+      {{ content }}
+      {% if site.footer == true %}
+      <p style="text-align: center; margin-bottom: 10px">
+      <small>{{ site.footer_text }}</small>
+      </p>
+      {% endif %}
+    </div><!-- /.container -->
   </body>
   <footer>
   </footer>

@@ -1,10 +1,9 @@
-$title_color: #B89FBF;
 $font_color: #1B2226;
-$h1_color: #1F1E26;
-$h2_color: #464B59;
-$h3_color: #9CA1A6;
-$alink_color: #026873;
-$ahover_color: #025E73;
+$h1_color: #416CA6;
+$h2_color: #416CA6;
+$h3_color: #148BA6;
+$alink_color: #F21B42;
+$orange_color: #F27329;
 $text_width: 960px;
 
 html {
@@ -14,21 +13,23 @@ html {
 }
 
 body {
-  background: #FFFFFF;
+  background: #F2F2F2;
   font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: $font_color;
   margin: 5% 0;
   text-align: justify;
   text-justify: inter-word;
+  line-height: 1.5;
 }
 
 h1 {
   font-family: Helvetica neue, sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-weight: 400;
+  font-weight: 450;
   color: $h1_color;
   font-size: 30px;
+  margin: 10px 0 0 0;
 }
 
 h2 {
@@ -37,6 +38,14 @@ h2 {
   font-weight: 400;
   color: $h2_color;
   font-size: 26px;
+  margin: 10px 0 0 0;
+  border-bottom: 2px solid $orange_color;
+  display: inline-block;
+  text-shadow:
+  2px 2px white,
+  2px -2px white,
+  -2px 2px white,
+  -2px -2px white;
 }
 
 h3 {
@@ -45,28 +54,45 @@ h3 {
   font-weight: 400;
   color: $h3_color;
   font-size: 22px;
+  margin: 10px 0 0 0;
 }
 
-a:link {
+a:link, a:hover, a:visited, a:active, a:focus {
   color: $alink_color;
   text-decoration: none;
 }
 
-a:hover {
-  color: $ahover_color;
-  text-decoration: none;
-}
-
-.header {
+.header_box {
   width: $text_width;
+  height: 128px;
   margin: auto;
-  .profile_pic {
+  .header_left {
     height: 128px;
-    width: 128px;
-    position: relative;
-    margin: 30px 30px 0 10px;
+    width: 50%$text_width;
+    margin: 0;
+    float: left;
+    .navigator {
+      width: 62px;
+      display: flex;
+      flex-direction: row;
+    }
+    .navigator div{
+      flex: auto;
+    }
+  }
+  .header_right {
+    height: 128px;
+    width: 50%$text_width;
+    margin: 0;
     float: right;
-    border-radius: 50%;
+    .profile_pic {
+      height: 128px;
+      width: 128px;
+      position: relative;
+      margin: 0 20px 0 0;
+      float: right;
+      border-radius: 50%;
+    }
   }
 }
 

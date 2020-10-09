@@ -5,9 +5,9 @@ title: Aymen Boudguiga
 
 ## About me
 
-  I have a Telecommunications Engineering diploma from [SUP'COM](http://www.supcom.mincom.tn/Fr/accueil_46_3), Tunis-[Tunisia](https://www.youtube.com/watch?v=EfuLF6D5Byc), obtained in 2008, after two years of intensive maths and physics preparatory school (IPEIT). I have then started a PhD jointly between Telecom SudParis and the University of Pierre and Marie Curie ([UPMC](https://www.telecom-sudparis.eu/)), Paris-France, under the supervision of Prof. [Maryline Laurent](http://www-public.imtbs-tsp.eu/~lauren_m/). My topic was on the proposal of new authentication protocols for wireless mesh networks with the use of identity-based cryptography. From 2013 to the end of 2017, I worked as a security engineer at "Institut de Recherche en Technologie SystemX". I worked on risk analysis and security evaluation of autonomous vehicles embedded networks.
+  I am currently working as a research engineer at the Atomic and Alternative Energy Commission (CEA), Saclay-France. I am investigating the use of homomorphic encryption in practice.
+  Previously, I finished a PhD jointly between Telecom SudParis and the University of Pierre and Marie Curie ([UPMC](https://www.telecom-sudparis.eu/)), Paris-France, under the supervision of Prof. [Maryline Laurent](http://www-public.imtbs-tsp.eu/~lauren_m/). My topic was on the proposal of new authentication protocols for wireless mesh networks with the use of identity-based cryptography. From 2013 to the end of 2017, I worked as a security engineer at "Institut de Recherche en Technologie SystemX". I worked on risk analysis and security evaluation of autonomous vehicles embedded networks.
 
-  I am currently working as a research engineer at the Atomic and Alternative Energy Commission (CEA), Saclay-France.
 
   My main research topics are:
 
