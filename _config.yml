@@ -4,7 +4,7 @@ baseurl: "/aymen0b"
 author:
   name: Aymen Boudguiga
   email: aymen.boudguiga[@]gmail.com
-  profile_picture: aymen.jpg
+  ##  profile_picture: aymen.jpg
 
 markdown: kramdown
 

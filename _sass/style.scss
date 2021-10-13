@@ -4,7 +4,7 @@ $h2_color: #416CA6;
 $h3_color: #148BA6;
 $alink_color: #F21B42;
 $orange_color: #F27329;
-$text_width: 960px;
+$text_width: 768px;
 
 html {
   height: 100%;
@@ -13,12 +13,12 @@ html {
 }
 
 body {
-  background: #F2F2F2;
+  background: #F9F9F9;
   font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: $font_color;
   margin: 5% 0;
-  text-align: justify;
+  text-align: start;
   text-justify: inter-word;
   line-height: 1.5;
 }
