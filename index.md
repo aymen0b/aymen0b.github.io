@@ -16,10 +16,11 @@ title: Aymen Boudguiga
   - Past and current projects: ANR Mobisend, FP7 TWISNET, ELA, ISE, CTI, H2020 Konfido,...
 
 ## Teaching
-
+  - Introduction to ITS security, at Telecom SudParis, CCN Msc students, 2021
+  - [Introduction to homomorphic encryption](https://drive.google.com/file/d/1NjYllN7DoxRUiTAeJkyMOeHBnRozKiG7/view?usp=sharing), at Telecom SudParis, CCN Msc students and 3rd year engineers, 2021
   - [Introduction to homomorphic encryption](https://drive.google.com/file/d/1NjYllN7DoxRUiTAeJkyMOeHBnRozKiG7/view?usp=sharing), at Telecom SudParis, CCN Msc students, 2020
   - [Authentication with freeradius](https://drive.google.com/open?id=0By-svYdEGlt9UEhSOHlNdXBJLTA), at Telecom Paristech, Security Msc students, 2017
-  - Netasq firewalling and VPN lab, at Telecom SudParis, CCN Msc student and s3rd year engineers, 2016
+  - Netasq firewalling and VPN lab, at Telecom SudParis, CCN Msc students and s3rd year engineers, 2016
   - Secure ad-hoc network lab, at Telecom Paristech, Security Msc students, 2016
   - Secure ad-hoc network lab, at Telecom Paristech, Security Msc students, 2015
   - C programming, at ESME Sudria, CS Msc students, 2013
@@ -36,6 +37,8 @@ title: Aymen Boudguiga
 
 ### Conferences
 
+  - Aymen Boudguiga, Oana Stan, Abdessamad Fazzat, Houda Labiod, Pierre-Emmanuel Clet, "Privacy Preserving Services for Intelligent Transportation Systems with Homomorphic Encryption". ICISSP 2021.
+  - Walid Arabi, Reda Yaich, Aymen Boudguiga, Mawloud Omari, "Secure Data Processing for Industrial Remote Diagnosis and Maintenance". CRiSIS 2020.
   - Aymen Boudguiga, Oana Stan, Hichem Sidjelmaci, Sergiu Carpov, "Homomorphic Encryption at Work for Private Analysis of Security Logs". ICISSP 2020.
   - Othmane ElOmri, Aymen Boudguiga, Malika Izabachene, Witold Klaudel, "Privacy-Preserving k-means Clustering: an Application to Driving Style Recognition". NSS 2019.
   - Aymen Boudguiga, Jerome Letailleur, Renaud Sirdey, Witold Klaudel, "Enhancing CAN Security by Means of Lightweight Stream-Ciphers and Protocols", strive@SAFECOMP2019.
@@ -62,9 +65,11 @@ title: Aymen Boudguiga
 
 ### Patents
 
-  - W. Klaudel, P. Chiron, A. Boudguiga, A. Boulanger, Procédé de détection d'attaques dans un réseau de communication par diffusion comprenant des équipements électroniques et/ou informatiques, et réseau correspondant (numéro d'enregistrement inpi : FR1555992, 2017)
+  - A. Boudguiga, O. Stan, R. Sirdey, Methode de traitement confidentiel de logs d'un systeme d'information (EP3854021A1)
+  - A. Boudguiga, T. H. Nguyen, O. Stan, Methode de traitement confidentiel de donnees d’un vehicule (FR3096852B1)
+  - A. Boudguiga, J. Letailleur, R. Sirdey, Method of dynamic verification of the integrity of a machine code (FR3105484A1, 2019)
+  - W. Klaudel, P. Chiron, A. Boudguiga, A. Boulanger, Method for detecting attacks in a broadcast communication network including electronic and/or computer devices, and corresponding network (US patent number, WO2016207394A1, 2016)
   - A. Boudguiga, A. Olivereau, N. Oualha, C. Janneteau, Method and device for establishing session keys (US patent number: 20160044007, 2016)
-  - A. Boudguiga, A. Olivereau, N. Oualha, C. Janneteau, Procédé et dispositif d'établissement de clés de session (numéro d'enregistrement inpi : FR1352812, 2013)
 
 ### Miscellaneous
 
