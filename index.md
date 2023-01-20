@@ -6,7 +6,7 @@ title: Aymen Boudguiga
 ## About me
 
   I am currently working as a research engineer at the Atomic and Alternative Energy Commission (CEA), Saclay-France. I am investigating the use of homomorphic encryption in practice.
-  Previously, I finished a PhD jointly between Telecom SudParis and the University of Pierre and Marie Curie ([UPMC](https://www.telecom-sudparis.eu/)), Paris-France, under the supervision of Prof. [Maryline Laurent](http://www-public.imtbs-tsp.eu/~lauren_m/). My topic was on the proposal of new authentication protocols for wireless mesh networks with the use of identity-based cryptography. From 2013 to the end of 2017, I worked as a security engineer at "Institut de Recherche en Technologie SystemX". I worked on risk analysis and security evaluation of autonomous vehicles embedded networks.
+  Previously, I finished a PhD jointly between Telecom SudParis and the University of Pierre and Marie Curie ([UPMC](https://www.telecom-sudparis.eu/)), Paris-France. My topic was on the proposal of new authentication protocols for wireless mesh networks with the use of identity-based cryptography. From 2013 to the end of 2017, I worked as a security engineer at "Institut de Recherche en Technologie SystemX". I worked on risk analysis and security evaluation of autonomous vehicles embedded networks.
 
 
   My main research topics are:
@@ -37,6 +37,12 @@ title: Aymen Boudguiga
 
 ### Conferences
 
+  - Hichem Sedjelmaci, Nizar Kheir, Aymen Boudguiga, Nesrine Kaaniche: "Cooperative and smart attacks detection systems in 6G-enabled Internet of Things". ICC 2022.
+  - Oana Stan, Vincent Thouvenot, Aymen Boudguiga, Katarzyna Kapusta, Martin Zuber, Renaud Sirdey, "A Secure Federated Learning: Analysis of Different Cryptographic Tools". SECRYPT 2022.
+  - Nesrine Kaaniche, Aymen Boudguiga, Gustavo Gonzalez Granadillo, "Efficient Hybrid Model for Intrusion Detection Systems". SECRYPT 2022.
+  - Pierre-Emmanuel Clet, Martin Zuber, Aymen Boudguiga, Renaud Sirdey, Cédric Gouy-Pailler, "Putting up the swiss army knife of homomorphic calculations by means of TFHE functional bootstrapping". IACR Cryptol. ePrint Arch. 2022: 149.
+  - Alberto Pedrouzo-Ulloa, Aymen Boudguiga, Olive Chakraborty, Renaud Sirdey, Oana Stan, Martin Zuber, "Practical Multi-Key Homomorphic Encryption for More Flexible and Efficient Secure Federated Aggregation (preliminary work)". IACR Cryptol. ePrint Arch. 2022: 1674.
+  - Adda-Akram Bendoukha, Aymen Boudguiga, Renaud Sirdey, "Revisiting Stream-Cipher-Based Homomorphic Transciphering in the TFHE Era". FPS 2021.
   - Aymen Boudguiga, Oana Stan, Abdessamad Fazzat, Houda Labiod, Pierre-Emmanuel Clet, "Privacy Preserving Services for Intelligent Transportation Systems with Homomorphic Encryption". ICISSP 2021.
   - Walid Arabi, Reda Yaich, Aymen Boudguiga, Mawloud Omari, "Secure Data Processing for Industrial Remote Diagnosis and Maintenance". CRiSIS 2020.
   - Aymen Boudguiga, Oana Stan, Hichem Sidjelmaci, Sergiu Carpov, "Homomorphic Encryption at Work for Private Analysis of Security Logs". ICISSP 2020.
@@ -65,8 +71,8 @@ title: Aymen Boudguiga
 
 ### Patents
 
-  - A. Boudguiga, O. Stan, R. Sirdey, Methode de traitement confidentiel de logs d'un systeme d'information (EP3854021A1)
-  - A. Boudguiga, T. H. Nguyen, O. Stan, Methode de traitement confidentiel de donnees d’un vehicule (FR3096852B1)
+  - A Boudguiga, S Oana, R Sirdey Confidential method for processing logs of a computer system (US Patent App. 17/276,725, 2022)
+  - A. Boudguiga, TH. Nguyen, S. Oana, Method for confidentially processing data of a vehicle (US Patent App. 17/614,438, 2022)
   - A. Boudguiga, J. Letailleur, R. Sirdey, Method of dynamic verification of the integrity of a machine code (FR3105484A1, 2019)
   - W. Klaudel, P. Chiron, A. Boudguiga, A. Boulanger, Method for detecting attacks in a broadcast communication network including electronic and/or computer devices, and corresponding network (US patent number, WO2016207394A1, 2016)
   - A. Boudguiga, A. Olivereau, N. Oualha, C. Janneteau, Method and device for establishing session keys (US patent number: 20160044007, 2016)

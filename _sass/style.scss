@@ -14,7 +14,7 @@ html {
 
 body {
   background: #F9F9F9;
-  font-family: Roboto, sans-serif;
+  font-family: Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: $font_color;
   margin: 5% 0;
@@ -24,7 +24,7 @@ body {
 }
 
 h1 {
-  font-family: Helvetica neue, sans-serif;
+  font-family: Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 450;
   color: $h1_color;
@@ -33,19 +33,19 @@ h1 {
 }
 
 h2 {
-  font-family: Helvetica neue, sans-serif;
+  font-family: Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   color: $h2_color;
   font-size: 26px;
   margin: 10px 0 0 0;
-  text-shadow: 2px 2px 2px $orange_color;
+  /* text-shadow: 2px 2px 2px $orange_color; */
   /* display: inline-block; */
   /* border-bottom: 2px solid $orange_color; */
 }
 
 h3 {
-  font-family: Helvetica neue, sans-serif;
+  font-family: Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   color: $h3_color;
