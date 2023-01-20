@@ -10,11 +10,13 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+  background: transparent;
+  font-family: sans-serif;
+  text-size-adjust: 100%;
 }
 
 body {
-  background: #F9F9F9;
-  font-family: "Roboto Slab", monospace;
+  font: "Roboto Slab";
   -webkit-font-smoothing: antialiased;
   color: $font_color;
   margin: 5% 0;
@@ -24,33 +26,33 @@ body {
 }
 
 h1 {
-  font-family: Roboto, monospace;
+  font: Roboto;
   -webkit-font-smoothing: antialiased;
   font-weight: 450;
   color: $h1_color;
   font-size: 30px;
-  margin: 10px 0 0 0;
+  margin: auto;
 }
 
 h2 {
-  font-family: Roboto, monospace;
+  font: Roboto;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   color: $h2_color;
   font-size: 26px;
-  margin: 10px 0 0 0;
+  margin: auto;
   /* text-shadow: 2px 2px 2px $orange_color; */
   /* display: inline-block; */
-  /* border-bottom: 2px solid $orange_color; */
+  border-bottom: 2px solid $orange_color;
 }
 
 h3 {
-  font-family: Roboto, monospace;
+  font: Roboto;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   color: $h3_color;
   font-size: 22px;
-  margin: 10px 0 0 0;
+  margin: auto;
 }
 
 a:link, a:hover, a:visited, a:active, a:focus {
@@ -62,35 +64,21 @@ a:link, a:hover, a:visited, a:active, a:focus {
   width: $text_width;
   height: 128px;
   margin: auto;
-  .header_left {
-    height: 128px;
-    width: 50%$text_width;
-    margin: 0;
-    float: left;
-    .navigator {
-      width: 62px;
-      display: flex;
-      flex-direction: row;
-    }
-    .navigator div{
-      flex: auto;
-    }
-  }
-  .header_right {
-    height: 128px;
-    width: 50%$text_width;
-    margin: 0;
-    float: right;
+  .profile div{
     .profile_pic {
       height: 128px;
       width: 128px;
       position: relative;
-      margin: 0 20px 0 0;
-      float: right;
+      margin: 0 0 0 0;
+      /*float: right;*/
       border-radius: 50%;
     }
   }
+  .navigator div{
+    flex: auto;
+  }
 }
+
 
 .container {
   width: $text_width;
