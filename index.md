@@ -71,11 +71,11 @@ title: Aymen Boudguiga
 
 ### Patents
 
-  - A Boudguiga, S Oana, R Sirdey Confidential method for processing logs of a computer system (US Patent App. 17/276,725, 2022)
-  - A. Boudguiga, TH. Nguyen, S. Oana, Method for confidentially processing data of a vehicle (US Patent App. 17/614,438, 2022)
-  - A. Boudguiga, J. Letailleur, R. Sirdey, Method of dynamic verification of the integrity of a machine code (FR3105484A1, 2019)
-  - W. Klaudel, P. Chiron, A. Boudguiga, A. Boulanger, Method for detecting attacks in a broadcast communication network including electronic and/or computer devices, and corresponding network (US patent number, WO2016207394A1, 2016)
-  - A. Boudguiga, A. Olivereau, N. Oualha, C. Janneteau, Method and device for establishing session keys (US patent number: 20160044007, 2016)
+  - A. Boudguiga, S Oana, R Sirdey, "Confidential method for processing logs of a computer system" (US Patent App. 17/276,725, 2022)
+  - A. Boudguiga, TH. Nguyen, S. Oana,"Method for confidentially processing data of a vehicle" (US Patent App. 17/614,438, 2022)
+  - A. Boudguiga, J. Letailleur, R. Sirdey, "Method of dynamic verification of the integrity of a machine code" (FR3105484A1, 2019)
+  - W. Klaudel, P. Chiron, A. Boudguiga, A. Boulanger, "Method for detecting attacks in a broadcast communication network including electronic and/or computer devices, and corresponding network" (US patent number, WO2016207394A1, 2016)
+  - A. Boudguiga, A. Olivereau, N. Oualha, C. Janneteau, "Method and device for establishing session keys" (US patent number: 20160044007, 2016)
 
 ### Miscellaneous
 
