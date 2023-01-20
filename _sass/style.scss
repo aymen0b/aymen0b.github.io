@@ -64,12 +64,12 @@ a:link, a:hover, a:visited, a:active, a:focus {
   width: $text_width;
   margin: auto;
   height: 128px;
+  display: flex;
+  justify-content: center;
   .profile_pic {
     height: 128px;
     width: 128px;
     position: relative;
-    top: 50%;
-    left: 50%;
     border-radius: 50%;
   }
 }
@@ -82,12 +82,8 @@ a:link, a:hover, a:visited, a:active, a:focus {
   left: 50%;
   display: flex;
   flex-direction: row;
-  .linkedin {
-    margin: 2px;
-  }
-  .github {
-    margin: 2px;
-  }
+  flex-wrap: wrap;
+  justify-content: center;
 
 }
 
