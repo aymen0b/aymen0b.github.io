@@ -17,7 +17,7 @@ html {
 body {
   font-family: "Roboto Slab",sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 10px;
+  font-size: 11px;
   color: $font_color;
   margin: 5% 0;
   text-align: start;
@@ -61,8 +61,8 @@ a:link, a:hover, a:visited, a:active, a:focus {
 }
 
 .profile {
-  margin-left: 0;
-  margin-right: 0;
+  width: $text_width;
+  margin: auto;
   height: 128px;
   .profile_pic {
     height: 128px;
@@ -74,6 +74,8 @@ a:link, a:hover, a:visited, a:active, a:focus {
 }
 
 .navigator {
+  width: $text_width;
+  margin: auto;
   display: flex;
   flex-direction: row;
 }
