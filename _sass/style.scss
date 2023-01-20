@@ -14,7 +14,7 @@ html {
 
 body {
   background: #F9F9F9;
-  font-family: Verdana, sans-serif;
+  font-family: "Roboto Slab", monospace;
   -webkit-font-smoothing: antialiased;
   color: $font_color;
   margin: 5% 0;
@@ -24,7 +24,7 @@ body {
 }
 
 h1 {
-  font-family: Verdana, sans-serif;
+  font-family: Roboto, monospace;
   -webkit-font-smoothing: antialiased;
   font-weight: 450;
   color: $h1_color;
@@ -33,7 +33,7 @@ h1 {
 }
 
 h2 {
-  font-family: Verdana, sans-serif;
+  font-family: Roboto, monospace;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   color: $h2_color;
@@ -45,7 +45,7 @@ h2 {
 }
 
 h3 {
-  font-family: Verdana, sans-serif;
+  font-family: Roboto, monospace;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   color: $h3_color;
