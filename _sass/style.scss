@@ -80,11 +80,14 @@ a:link, a:hover, a:visited, a:active, a:focus {
     }
   }
 
+  .header {
+    margin: auto;
+  }
+
   .navigator {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
   }
 }
 .container {
