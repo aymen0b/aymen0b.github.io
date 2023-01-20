@@ -11,14 +11,13 @@ html {
   margin: 0;
   padding: 0;
   background: transparent;
-  font-family: sans-serif;
   text-size-adjust: 100%;
 }
 
 body {
-  font: "Roboto Slab";
+  font-family: "Roboto Slab",sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 11px;
+  font-size: 10px;
   color: $font_color;
   margin: 5% 0;
   text-align: start;
@@ -27,9 +26,9 @@ body {
 }
 
 h1 {
-  font: Roboto;
+  font-family: Roboto,sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-weight: 450;
+  font-weight: 500;
   color: $h1_color;
   font-size: 30px;
   text-align: center;
@@ -37,21 +36,18 @@ h1 {
 }
 
 h2 {
-  font: Roboto;
+  font-family: Roboto,sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-weight: 400;
+  font-weight: 500;
   color: $h2_color;
   font-size: 26px;
   text-align: center;
   margin: auto;
-
-  /* text-shadow: 2px 2px 2px $orange_color; */
-  /* display: inline-block; */
   border-bottom: 2px solid $orange_color;
 }
 
 h3 {
-  font: Roboto;
+  font-family: Roboto,sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   color: $h3_color;
@@ -64,31 +60,25 @@ a:link, a:hover, a:visited, a:active, a:focus {
   text-decoration: none;
 }
 
-.header_box {
-  width: $text_width;
-  height: 256px;
+.profile {
   margin-left: 0;
   margin-right: 0;
-  .profile div{
+  height: 128px;
+  .profile_pic {
     height: 128px;
-    .profile_pic {
-      height: 128px;
-      width: 128px;
-      position: relative;
-      margin: 0 20px 0 0;
-      /*float: right;*/
-      border-radius: 50%;
-    }
-  }
-  .navigator div{
-    display: flex;
-    flex-direction: row;
+    width: 128px;
+    position: relative;
+    margin: 0 0 0 0;
+    border-radius: 50%;
   }
 }
 
+.navigator {
+  display: flex;
+  flex-direction: row;
+}
 
 .container {
   width: $text_width;
   margin: auto;
 }
-
