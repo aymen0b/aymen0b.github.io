@@ -17,7 +17,7 @@ html {
 body {
   font-family: "Roboto Slab",sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 12px;
+  font-size: 14px;
   color: $font_color;
   margin: 5% 0;
   text-align: start;
@@ -85,9 +85,15 @@ a:link, a:hover, a:visited, a:active, a:focus {
   }
 
   .navigator {
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
+    padding: 2px;
+    .linkedin {
+      margin: 2px;
+    }
+    .github {
+      margin: 2px;
+    }
   }
 }
 .container {
