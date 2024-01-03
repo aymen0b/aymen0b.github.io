@@ -36,7 +36,12 @@ title: Aymen Boudguiga
   - Tony Cheneau, Aymen Boudguiga, Maryline Laurent, "Significantly improved performances of the cryptographically generated addresses thanks to ECC and GPGPU", Computers and Security Journal (CoSe), Elsevier, Volume 29, pages 419-431, June 2010.
 
 ### Conferences
-
+  - Daphné Trama, Pierre-Emmanuel Clet, Aymen Boudguiga, Renaud Sirdey: "A Homomorphic AES Evaluation in Less than 30 Seconds by Means of TFHE". WAHC@CCS 2023.
+  - Marina Checri, Jean-Paul Bultel, Renaud Sirdey, Aymen Boudguiga: "Lightweight FHE-based Protocols Achieving Results Consistency for Data Encrypted Under Different Keys". SECRYPT 2023.
+  - Adda-Akram Bendoukha, Pierre-Emmanuel Clet, Aymen Boudguiga, Renaud Sirdey: "Optimized Stream-Cipher-Based Transciphering by Means of Functional-Bootstrapping". DBSec 2023.
+  - Devharsh Trivedi, Aymen Boudguiga, Nikos Triandopoulos: "SigML: Supervised Log Anomaly with Fully Homomorphic Encryption". CSCML 2023.
+  - Daphné Trama, Pierre-Emmanuel Clet, Aymen Boudguiga, Renaud Sirdey: "Building Blocks for LSTM Homomorphic Evaluation with TFHE". CSCML 2023.
+  - Pierre-Emmanuel Clet, Aymen Boudguiga, Renaud Sirdey, Martin Zuber: "ComBo: A Novel Functional Bootstrapping Method for Efficient Evaluation of Nonlinear Functions in the Encrypted Domain". AFRICACRYPT 2023.
   - Hichem Sedjelmaci, Nizar Kheir, Aymen Boudguiga, Nesrine Kaaniche: "Cooperative and smart attacks detection systems in 6G-enabled Internet of Things". ICC 2022.
   - Oana Stan, Vincent Thouvenot, Aymen Boudguiga, Katarzyna Kapusta, Martin Zuber, Renaud Sirdey, "A Secure Federated Learning: Analysis of Different Cryptographic Tools". SECRYPT 2022.
   - Nesrine Kaaniche, Aymen Boudguiga, Gustavo Gonzalez Granadillo, "Efficient Hybrid Model for Intrusion Detection Systems". SECRYPT 2022.
@@ -79,6 +84,7 @@ title: Aymen Boudguiga
 
 ### Miscellaneous
 
+  - [Technip Energies Online Exclusive: The benefits of homomorphic encryption: A technological enabler for digital services to operations](https://www.hydrocarbonprocessing.com/news/2022/06/technip-energies-online-exclusive-the-benefits-of-homomorphic-encryption-a-technological-enabler-for-digital-services-to-operations)
   - Participation to ENISA document: "Cybersecurity and resilience of smart cars"
   - Aymen Boudguiga, Arnaud Kaiser, Pierpaolo Cincilla, "Cooperative-ITS Architecture and Security Challenges: a Survey", 22th ITS World Congress, Bordeaux, October 2015.
   - Aymen Boudguiga, Maryline Laurent, "La sécurité dans les réseaux 802.11", Techniques de l'Ingénieur, Sécurité des systémes d'information, TE7377, 2010.
