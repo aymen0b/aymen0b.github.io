@@ -30,12 +30,16 @@ title: Aymen Boudguiga
 
 ### Journals
 
+  - Hichem Sedjelmaci, Nesrine kaaniche, Aymen Boudguiga, Nirwan Ansari, "Secure attack detection franmework for hierarchical 6G-enabled internet of vehicles", IEEE Trans. Vehicular Tehnology 73(2°: 2633-2642.
   - Hichem Sedjelmaci, Aymen Boudguiga, Ines Ben Jemaa, Sidi Mohammed Senouci, "An efficient cyber defense framework for UAV-Edge computing network", Ad-Hoc Networks 94-2019
   - Heng Chuan Tan, Maode Ma, Houda Labiod, Aymen Boudguiga, Jun Zhang, Peter Han Joo Chang, "A Secure and Authenticated Key Management Protocol (SA-KMP) for Vehicular Networks", IEEE Transactions on Vehicular Technology 65(12): 9570-9584.
   - Aymen Boudguiga, Maryline Laurent, "On the use of ID-Based Cryptography for the definition of new EAP authentication methods", International Journal for Information Security Research (IJISR), Volume 2, Issue 1/2, March/June 2012.
   - Tony Cheneau, Aymen Boudguiga, Maryline Laurent, "Significantly improved performances of the cryptographically generated addresses thanks to ECC and GPGPU", Computers and Security Journal (CoSe), Elsevier, Volume 29, pages 419-431, June 2010.
 
 ### Conferences
+  - Marina Checri, Renaud Sirdey, Aymen Boudguiga, Jean-Paul Bultet, "On the practical CPA^D security of exaxt and threshold FHE schemes and library". Crypto 2024.
+  - Olive Chakraborty, Aymen Boudguiga, "A decentralized federated learning using reputation." ICISSP 2024.
+  - Alberto Pedrouzo-Ulloa, Aymen Boudguiga, Olive Chakraborty, Renaud Sirdey, Oana Stan, Martin Zuber, "Practical multi-key homomorphic encryption for more flexible and efficient secure federated average aggregation". CSR 2023.
   - Daphné Trama, Pierre-Emmanuel Clet, Aymen Boudguiga, Renaud Sirdey: "A Homomorphic AES Evaluation in Less than 30 Seconds by Means of TFHE". WAHC@CCS 2023.
   - Marina Checri, Jean-Paul Bultel, Renaud Sirdey, Aymen Boudguiga: "Lightweight FHE-based Protocols Achieving Results Consistency for Data Encrypted Under Different Keys". SECRYPT 2023.
   - Adda-Akram Bendoukha, Pierre-Emmanuel Clet, Aymen Boudguiga, Renaud Sirdey: "Optimized Stream-Cipher-Based Transciphering by Means of Functional-Bootstrapping". DBSec 2023.
