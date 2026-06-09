@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aymen Boudguiga — Research Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0f0e0d;
+      --paper: #f5f1eb;
+      --warm-mid: #c8b49a;
+      --accent: #1a3a5c;
+      --accent-light: #2e5f8a;
+      --red: #8b2c2c;
+      --muted: #6b6560;
+      --rule: #d5ccc3;
+      --transition-speed: .35s;
+    }
+
+    html.dark {
+      --ink: #e8e2d9;
+      --paper: #141210;
+      --warm-mid: #7a6a56;
+      --accent: #7bafd4;
+      --accent-light: #9bcae8;
+      --red: #c17070;
+      --muted: #8a837a;
+      --rule: #2a2620;
+    }
+
+    /* ─── THEME TOGGLE ─── */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 24px;
+      z-index: 500;
+      background: none;
+      border: 1.5px solid var(--rule);
+      cursor: pointer;
+      width: 44px;
+      height: 26px;
+      border-radius: 13px;
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      background: var(--paper);
+      transition: background var(--transition-speed), border-color var(--transition-speed);
+    }
+    .theme-toggle-knob {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--ink);
+      transition: transform var(--transition-speed), background var(--transition-speed);
+    }
+    html.dark .theme-toggle-knob { transform: translateX(18px); }
+    .theme-toggle-icon {
+      position: absolute;
+      font-size: 11px;
+      pointer-events: none;
+      transition: opacity .2s;
+    }
+    .theme-toggle-icon.sun { right: 6px; opacity: 1; }
+    .theme-toggle-icon.moon { left: 6px; opacity: 0; }
+    html.dark .theme-toggle-icon.sun { opacity: 0; }
+    html.dark .theme-toggle-icon.moon { opacity: 1; }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Lora', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.75;
+      overflow-x: hidden;
+      transition: background var(--transition-speed), color var(--transition-speed);
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      opacity: .025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    /* ─── HERO ─── */
+    header {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      min-height: 100vh;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 40px 60px;
+      align-items: center;
+    }
+
+    .hero-text { padding-right: 60px; }
+
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp .6s .1s forwards;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.05;
+      letter-spacing: -.02em;
+      color: var(--ink);
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: fadeUp .7s .2s forwards;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin-bottom: 36px;
+      opacity: 0;
+      animation: fadeUp .7s .35s forwards;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp .7s .5s forwards;
+    }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border: 1.5px solid var(--ink);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink);
+      transition: background .2s, color .2s;
+    }
+    .social-links a:hover { background: var(--ink); color: var(--paper); }
+
+    .hero-portrait { opacity: 0; animation: fadeIn .9s .4s forwards; }
+    .hero-portrait img { width: 100%; display: block; filter: sepia(.12) contrast(1.05); }
+
+    /* ─── SHARED ─── */
+    .divider { display: none; }
+
+    section { max-width: 1100px; margin: 0 auto; padding: 70px 40px; }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+    /* ─── ABOUT ─── */
+    .about-body p { font-family: 'Inter', sans-serif; font-weight: 300; font-size: .92rem; color: var(--ink); margin-bottom: 16px; max-width: 680px; }
+
+    /* ─── TEACHING ─── */
+    .teaching-list { list-style: none; }
+    .teaching-list li {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 24px;
+      padding: 8px 0;
+      align-items: baseline;
+      font-family: 'Inter', sans-serif;
+    }
+    .teaching-list li:first-child { }
+    .teaching-year { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); }
+    .teaching-title { font-family: 'Inter', sans-serif; font-size: .9rem; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
+    .teaching-where { font-family: 'Inter', sans-serif; font-size: .82rem; font-weight: 300; color: var(--accent); }
+    .teaching-list a { color: var(--accent-light); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; transition: text-decoration-color .2s; }
+    .teaching-list a:hover { text-decoration-color: var(--accent-light); }
+
+    /* ─── PUBLICATIONS ─── */
+    .pub-tabs {
+      display: flex;
+      margin-bottom: 32px;
+      border-bottom: 1.5px solid var(--rule);
+    }
+    .pub-tab {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      cursor: pointer;
+      color: var(--muted);
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1.5px;
+      transition: color .2s, border-color .2s;
+      background: none;
+      border-top: none; border-left: none; border-right: none;
+    }
+    .pub-tab.active { color: var(--ink); border-bottom-color: var(--ink); }
+    .pub-panel { display: none; }
+    .pub-panel.active { display: block; }
+
+    .pub-entry {
+      padding: 6px 0;
+      font-family: 'Inter', sans-serif;
+    }
+    .pub-entry:first-child { }
+    .pub-num { font-family: 'DM Mono', monospace; font-size: .82rem; color: var(--red); margin-right: 6px; }
+    .pub-title { font-size: .88rem; font-weight: 500; color: var(--ink); display: inline; }
+    .pub-meta { display: inline; font-size: .85rem; font-weight: 300; color: var(--muted); font-style: normal; }
+    .pub-meta::before { content: ' — '; color: var(--rule); }
+    .pub-venue { display: inline; font-size: .85rem; font-weight: 300; color: var(--muted); font-style: italic; }
+    .pub-venue::before { content: ', '; }
+
+    .patent-entry { padding: 10px 0; border-bottom: 1px solid var(--rule); }
+    .patent-entry:first-child { border-top: 1px solid var(--rule); }
+    .patent-id { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--red); letter-spacing: .08em; margin-bottom: 2px; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .1em;
+      color: var(--muted);
+      border-top: 1.5px solid var(--rule);
+    }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 780px) {
+      header { grid-template-columns: 1fr; padding: 60px 24px 40px; min-height: unset; gap: 40px; }
+      .hero-text { padding-right: 0; }
+      .hero-portrait { max-width: 240px; }
+      section { padding: 50px 24px; }
+      .divider { padding: 0 24px; }
+      .teaching-list li { grid-template-columns: 80px 1fr; gap: 12px; }
+      .pub-tab { padding: 10px 10px; font-size: 9px; }
+    }
+  </style>
+</head>
+<body>
+
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+  <span class="theme-toggle-knob"></span>
+  <span class="theme-toggle-icon sun">☀</span>
+  <span class="theme-toggle-icon moon">☽</span>
+</button>
+
+<!-- ─── HERO ─── -->
+<header>
+  <div class="hero-text">
+    <div class="eyebrow">Research Engineer · CEA Saclay, France</div>
+    <h1>Aymen<br>Boudguiga</h1>
+    <p class="tagline">Cryptographer and security engineer investigating homomorphic encryption, network authentication, and privacy-preserving systems.</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/aymen0b/" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/aymen0b" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a href="https://scholar.google.com/citations?hl=fr&user=bxnfQPgAAAAJ" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+        Scholar
+      </a>
+    </div>
+  </div>
+  <div class="hero-portrait">
+    <img src="ab.png" alt="Aymen Boudguiga" />
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<!-- ─── ABOUT ─── -->
+<section id="about" class="reveal">
+  <div class="section-label">About</div>
+  <div class="about-body">
+    <p>I am currently working as a research engineer at the Atomic and Alternative Energy Commission (CEA), Saclay, France, where I investigate the practical use of homomorphic encryption.</p>
+    <p>Previously, I completed a PhD jointly between Telecom SudParis and the University of Pierre and Marie Curie (UPMC), Paris, on new authentication protocols for wireless mesh networks using identity-based cryptography.</p>
+    <p>From 2013 to the end of 2017, I worked as a security engineer at Institut de Recherche en Technologie SystemX, focusing on risk analysis and security evaluation of autonomous vehicles' embedded networks.</p>
+    <p>My main research topics are applied cryptography (homomorphic encryption, lightweight crypto) and network security (authentication, risk analysis, performance analysis of security protocols).</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ─── TEACHING ─── -->
+<section id="teaching" class="reveal">
+  <div class="section-label">Teaching</div>
+  <ul class="teaching-list">
+      <li>
+      <span class="teaching-year">2026</span>
+      <div>
+        <div class="teaching-title"><a href="https://drive.google.com/file/d/1FGIthr29koHJkMYHWTCiEpbtZMRC4Kuz/view?usp=drive_link" target="_blank">On the application of fully homomorphic encryption</a></div>
+        <div class="teaching-where">University Paris-Saclay . P3S3 Summer School</div>
+      </div>
+    </li>
+    <li>
+    <li>
+      <span class="teaching-year">2024–26</span>
+      <div>
+        <div class="teaching-title"><a href="https://drive.google.com/file/d/1eh5a5wjh5GX_cG6P4L7Auy9MFYIUG_rF/view?usp=drive_link" target="_blank">Introduction to homomorphic encryption</a></div>
+        <div class="teaching-where">Telecom Paristech · MSc students</div>
+      </div>
+    </li>
+    <li>
+      <span class="teaching-year">2021</span>
+      <div>
+        <div class="teaching-title">Introduction to ITS security</div>
+        <div class="teaching-where">Telecom SudParis · CCN MSc students</div>
+      </div>
+    </li>
+    <li>
+      <span class="teaching-year">2020–21</span>
+      <div>
+        <div class="teaching-title"><a href="https://drive.google.com/file/d/1NjYllN7DoxRUiTAeJkyMOeHBnRozKiG7/view?usp=sharing" target="_blank">Introduction to homomorphic encryption</a></div>
+        <div class="teaching-where">Telecom SudParis · CCN MSc students &amp; 3rd year engineers</div>
+      </div>
+    </li>
+    <li>
+      <span class="teaching-year">2017</span>
+      <div>
+        <div class="teaching-title"><a href="https://drive.google.com/open?id=0By-svYdEGlt9UEhSOHlNdXBJLTA" target="_blank">Authentication with freeradius</a></div>
+        <div class="teaching-where">Telecom Paristech · Security MSc students</div>
+      </div>
+    </li>
+    <li>
+      <span class="teaching-year">2016</span>
+      <div>
+        <div class="teaching-title">Netasq firewalling and VPN lab</div>
+        <div class="teaching-where">Telecom SudParis · CCN MSc students &amp; 3rd year engineers</div>
+      </div>
+    </li>
+    <li>
+      <span class="teaching-year">2015–16</span>
+      <div>
+        <div class="teaching-title">Secure ad-hoc network lab</div>
+        <div class="teaching-where">Telecom Paristech · Security MSc students</div>
+      </div>
+    </li>
+    <li>
+      <span class="teaching-year">2013</span>
+      <div>
+        <div class="teaching-title">C programming</div>
+        <div class="teaching-where">ESME Sudria · CS MSc students</div>
+      </div>
+    </li>
+    <li>
+      <span class="teaching-year">2011–12</span>
+      <div>
+        <div class="teaching-title">Introduction to ECC and IBC</div>
+        <div class="teaching-where">Telecom SudParis · CCN MSc students &amp; 2nd year engineers</div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<div class="divider"></div>
+
+<!-- ─── PUBLICATIONS ─── -->
+<section id="publications" class="reveal">
+  <div class="section-label">Publications</div>
+
+  <div class="pub-tabs">
+    <button class="pub-tab active" onclick="showTab('journals',this)">Journals</button>
+    <button class="pub-tab" onclick="showTab('conferences',this)">Conferences</button>
+    <button class="pub-tab" onclick="showTab('books',this)">Books &amp; Patents</button>
+  </div>
+
+  <!-- JOURNALS -->
+  <div id="journals" class="pub-panel active">
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Running Standard Block Ciphers Beyond AES with TFHE: Experiments and Lessons Learnt</span><span class="pub-meta">D. Trama, A. Boudguiga, R. Sirdey</span><span class="pub-venue">IACR Communications in Cryptology · 2026</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Evaluating Larger Lookup Tables using CKKS</span><span class="pub-meta">J. Dumezy, A. Alexandru, Y. Polyakov, P-E. Clet, O. Chakraborty, A. Boudguiga</span><span class="pub-venue">IACR Transactions on Cryptographic Hardware and Embedded Systems · 2026</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Further Improvements in AES Execution over TFHE</span><span class="pub-meta">S. Belaïd, N. Bon, A. Boudguiga, R. Sirdey, D. Trama, N. Ye</span><span class="pub-venue">IACR Communications in Cryptology · 2025</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Towards Privacy-preserving and Fairness-aware Federated Learning Framework</span><span class="pub-meta">A-A. Bendoukha, D. Demirag, N. Kaaniche, A. Boudguiga, R. Sirdey, S. Gambs</span><span class="pub-venue">Proceedings on Privacy Enhancing Technologies · 2025</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Designing a General-Purpose 8-bit (T)FHE Processor Abstraction</span><span class="pub-meta">D. Trama, A. Boudguiga, P-E. Clet, R. Sirdey, N. Ye</span><span class="pub-venue">IACR Transactions on Cryptographic Hardware and Embedded Systems · 2025</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Secure attack detection framework for hierarchical 6G-enabled internet of vehicles</span><span class="pub-meta">H. Sedjelmaci, N. Kaaniche, A. Boudguiga, N. Ansari</span><span class="pub-venue">IEEE Transactions on Vehicular Technology · 2024</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">An efficient cyber defense framework for UAV-Edge computing network</span><span class="pub-meta">H. Sedjelmaci, A. Boudguiga, I. Ben Jemaa, S.M. Senouci</span><span class="pub-venue">Ad-Hoc Networks · 2019</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">A Secure and Authenticated Key Management Protocol (SA-KMP) for Vehicular Networks</span><span class="pub-meta">H.C. Tan, M. Ma, H. Labiod, A. Boudguiga, J. Zhang, P. Han Joo Chong</span><span class="pub-venue">IEEE Transactions on Vehicular Technology · 2016</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">On the use of ID-Based Cryptography for the definition of new EAP authentication methods</span><span class="pub-meta">A. Boudguiga, M. Laurent</span><span class="pub-venue">International Journal of Information Security and Research · 2012</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Significantly improved performances of the cryptographically generated addresses thanks to ECC and GPGPU</span><span class="pub-meta">T. Cheneau, A. Boudguiga, M. Laurent</span><span class="pub-venue">Computers &amp; Security, Elsevier · 2010</span></div>
+  </div>
+
+  <!-- CONFERENCES -->
+  <div id="conferences" class="pub-panel">
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Unveiling the (in)Security of Threshold FHE-Based Federated Learning: The Practical Impact of Recent CPAD Attacks</span><span class="pub-meta">A-A. Bendoukha, R. Sirdey, A. Boudguiga, N. Kaaniche</span><span class="pub-venue">IEEE CSF · 2025</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">FADE: Federated Aggregation with Discrimination Elimination</span><span class="pub-meta">A-A. Bendoukha, H.H. Arcolezi, N. Kaaniche, A. Boudguiga, R. Sirdey, P-E. Clet</span><span class="pub-venue">ACM FAccT · 2025</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Scalable Privacy-Preserving Database Queries with FHE and PEKS</span><span class="pub-meta">N. Quero, R. Sirdey, A. Boudguiga, D. Pointcheval, Q. Sinh, N. Karam</span><span class="pub-venue">FPS · 2025</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">FairCognizer: A Model for Accurate Predictions with Inherent Fairness Evaluation</span><span class="pub-meta">A-A. Bendoukha, N. Kaaniche, A. Boudguiga, R. Sirdey</span><span class="pub-venue">IJCAI · 2025</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">On the Practical CPA^D Security of "Exact" and Threshold FHE Schemes and Libraries</span><span class="pub-meta">M. Checri, R. Sirdey, A. Boudguiga, J-P. Bultel</span><span class="pub-venue">CRYPTO · 2024</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">A Decentralized Federated Learning Using Reputation</span><span class="pub-meta">O. Chakraborty, A. Boudguiga</span><span class="pub-venue">ICISSP · 2024</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">FairCognizer: A Model for Accurate Predictions with Inherent Fairness Evaluation</span><span class="pub-meta">A-A. Bendoukha, N. Kaaniche, A. Boudguiga, R. Sirdey</span><span class="pub-venue">ECAI · 2024</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Towards Privacy-Preserving Platooning Services by means of Homomorphic Encryption</span><span class="pub-meta">N. Quero, A. Boudguiga, R. Sirdey, N. Karam</span><span class="pub-venue">VehicleSec · 2023</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Lightweight FHE-based Protocols Achieving Results Consistency for Data Encrypted Under Different Keys</span><span class="pub-meta">M. Chekri, J-P. Bultel, R. Sirdey, A. Boudguiga</span><span class="pub-venue">Secrypt · 2023</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Practical Multi-Key Homomorphic Encryption for More Flexible and Efficient Secure Federated Average Aggregation</span><span class="pub-meta">A. Pedrouzo-Ulloa, A. Boudguiga, O. Chakraborty, R. Sirdey, O. Stan, M. Zuber</span><span class="pub-venue">IEEE CSR · 2023</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">A Homomorphic AES Evaluation in Less than 30 Seconds by Means of TFHE</span><span class="pub-meta">D. Trama, P-E. Clet, A. Boudguiga, R. Sirdey</span><span class="pub-venue">WAHC@CCS · 2023</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">ComBo: A Novel Functional Bootstrapping Method for Efficient Evaluation of Nonlinear Functions in the Encrypted Domain</span><span class="pub-meta">P-E. Clet, A. Boudguiga, R. Sirdey, M. Zuber</span><span class="pub-venue">AFRICACRYPT · 2023</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Optimized Stream-Cipher-Based Transciphering by Means of Functional-Bootstrapping</span><span class="pub-meta">A-A. Bendoukha, P-E. Clet, A. Boudguiga, R. Sirdey</span><span class="pub-venue">DBSec · 2023</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Building Blocks for LSTM Homomorphic Evaluation with TFHE</span><span class="pub-meta">D. Trama, P-E. Clet, A. Boudguiga, R. Sirdey</span><span class="pub-venue">CSCML · 2023</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">SigML: Supervised Log Anomaly with Fully Homomorphic Encryption</span><span class="pub-meta">D. Trivedi, A. Boudguiga, N. Triandopoulos</span><span class="pub-venue">CSCML · 2023</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">A Secure Federated Learning: Analysis of Different Cryptographic Tools</span><span class="pub-meta">O. Stan, V. Thouvenot, A. Boudguiga, K. Kapusta, M. Zuber, R. Sirdey</span><span class="pub-venue">SECRYPT · 2022</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Efficient Hybrid Model for Intrusion Detection Systems</span><span class="pub-meta">N. Kaaniche, A. Boudguiga, G. Gonzalez Granadillo</span><span class="pub-venue">SECRYPT · 2022</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Cooperative and Smart Attacks Detection Systems in 6G-enabled Internet of Things</span><span class="pub-meta">H. Sedjelmaci, N. Kheir, A. Boudguiga, N. Kaaniche</span><span class="pub-venue">IEEE ICC · 2022</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Revisiting Stream-Cipher-Based Homomorphic Transciphering in the TFHE Era</span><span class="pub-meta">A-A. Bendoukha, A. Boudguiga, R. Sirdey</span><span class="pub-venue">FPS · 2021</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Privacy Preserving Services for Intelligent Transportation Systems with Homomorphic Encryption</span><span class="pub-meta">A. Boudguiga, O. Stan, A. Fazzat, H. Labiod, P-E. Clet</span><span class="pub-venue">ICISSP · 2021</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Secure Data Processing for Industrial Remote Diagnosis and Maintenance</span><span class="pub-meta">W. Arabi, R. Yaich, A. Boudguiga, M. Omar</span><span class="pub-venue">CRiSIS · 2020</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Homomorphic Encryption at Work for Private Analysis of Security Logs</span><span class="pub-meta">A. Boudguiga, O. Stan, H. Sedjelmaci, S. Carpov</span><span class="pub-venue">ICISSP · 2020</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Enhancing CAN Security by Means of Lightweight Stream-Ciphers and Protocols</span><span class="pub-meta">A. Boudguiga, J. Letailleur, R. Sirdey, W. Klaudel</span><span class="pub-venue">NSS · 2019</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Privacy-Preserving k-means Clustering: an Application to Driving Style Recognition</span><span class="pub-meta">O. El Omri, A. Boudguiga, M. Izabachene, W. Klaudel</span><span class="pub-venue">NSS · 2019</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">A generic cyber defense scheme based on stackelberg game for vehicular network</span><span class="pub-meta">H. Sedjelmaci, I. Horiya Brahmi, A. Boudguiga, W. Klaudel</span><span class="pub-venue">CCNC · 2018</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Cooperative Security Framework for CBTC Network</span><span class="pub-meta">H. Sedjelmaci, F. Guenab, A. Boudguiga, Y. Petiot</span><span class="pub-venue">ICC · 2018</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">SARA: Security Automotive Risk Analysis Method</span><span class="pub-meta">J-P. Monteuuis, A. Boudguiga, J. Zhang, H. Labiod, A. Servel, P. Urien</span><span class="pub-venue">CPSS@AsiaCCS · 2018</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Towards Better Availability and Accountability for IoT Updates by means of a Blockchain</span><span class="pub-meta">A. Boudguiga, N. Bouzerna, L. Granboulan, A. Olivereau, F. Quesnel, A. Roger, R. Sirdey</span><span class="pub-venue">IEEE EuroS&amp;P Workshops · 2017</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">A Simple Intrusion Detection Method for CAN Bus</span><span class="pub-meta">A. Boudguiga, W. Klaudel, A. Boulanger, P. Chiron</span><span class="pub-venue">IEEE ICC · 2016</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">RACE: Risk Analysis for Cooperative Engines</span><span class="pub-meta">A. Boudguiga, A. Boulanger, P. Chiron, W. Klaudel, H. Labiod, J-C. Seguy</span><span class="pub-venue">NTMS · 2015</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">On the performance of freescale i.MX6 cryptographic acceleration and assurance module</span><span class="pub-meta">A. Boudguiga, W. Klaudel, J. Durand Wesolowski</span><span class="pub-venue">RAPIDO@HiPEAC · 2015</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">ID Based Cryptography for Cloud Data Storage</span><span class="pub-meta">N. Kaaniche, A. Boudguiga, M. Laurent</span><span class="pub-venue">IEEE CLOUD · 2013</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Server Assisted Key Establishment for WSN: A MIKEY-Ticket Approach</span><span class="pub-meta">A. Boudguiga, A. Olivereau, N. Oualha</span><span class="pub-venue">TrustCom · 2013</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">An authentication scheme for IEEE 802.11s mesh networks relying on Sakai-Kasahara ID-Based Cryptographic algorithms</span><span class="pub-meta">A. Boudguiga, M. Laurent</span><span class="pub-venue"> COMNET · 2012</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">An EAP ID-based authentication method for wireless networks</span><span class="pub-meta">A. Boudguiga, M. Laurent</span><span class="pub-venue">ICITST · 2011</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Key-escrow resistant ID-based authentication scheme for IEEE 802.11s mesh networks</span><span class="pub-meta">A. Boudguiga, M. Laurent</span><span class="pub-venue">WCNC · 2011</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">An ID-based authentication scheme for the IEEE 802.11s Mesh Network</span><span class="pub-meta">A. Boudguiga, M. Laurent</span> <span class="pub-venue">WiMob · 2010</span></div>
+   </div>
+
+  <!-- BOOKS & PATENTS -->
+    <!-- BOOKS & PATENTS -->
+  <div id="books" class="pub-panel">
+    <div class="section-label" style="margin-top:8px">Book Chapters</div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Authentication in wireless mesh networks</span><span class="pub-meta">A. Boudguiga, M. Laurent</span><span class="pub-venue">Security for Multi-Hop Wireless Networks · CRC Press, 2014</span></div>
+    <div class="pub-entry"><span class="pub-num">.</span><span class="pub-title">Fundamentals of ID-Based Cryptography</span><span class="pub-meta">A. Boudguiga, M. Laurent, M. Hamdi</span><span class="pub-venue">Practical Cryptography: Algorithms &amp; Implementation in C++ · CRC Press, 2014</span></div>
+
+    <div class="section-label" style="margin-top:48px">Patents</div>
+    <div class="patent-entry">
+      <div class="patent-id">US 17/276,725 · 2022</div>
+      <div class="pub-title">Confidential method for processing logs of a computer system</div>
+      <div class="pub-meta">A. Boudguiga, S. Oana, R. Sirdey</div>
+    </div>
+    <div class="patent-entry">
+      <div class="patent-id">US 17/614,438 · 2022</div>
+      <div class="pub-title">Method for confidentially processing data of a vehicle</div>
+      <div class="pub-meta">A. Boudguiga, T.H. Nguyen, S. Oana</div>
+    </div>
+    <div class="patent-entry">
+      <div class="patent-id">FR3105484A1 · 2019</div>
+      <div class="pub-title">Method of dynamic verification of the integrity of a machine code</div>
+      <div class="pub-meta">A. Boudguiga, J. Letailleur, R. Sirdey</div>
+    </div>
+     <div class="patent-entry">
+      <div class="patent-id">US 9,774,585 B2 · 2017</div>
+      <div class="pub-title">Method and device for forming a secure wireless network for resource-constrained nodes</div>
+      <div class="pub-meta">A. Boudguiga, N. Oualha, A. Olivereau, C. Janneteau</div>
+    </div>
+    <div class="patent-entry">
+      <div class="patent-id">WO2016207394A1 · 2016</div>
+      <div class="pub-title">Method for detecting attacks in a broadcast communication network</div>
+      <div class="pub-meta">W. Klaudel, P. Chiron, A. Boudguiga, A. Boulanger</div>
+    </div>
+    <div class="patent-entry">
+      <div class="patent-id">US 20160044007 · 2016</div>
+      <div class="pub-title">Method and device for establishing session keys</div>
+      <div class="pub-meta">A. Boudguiga, N. Oualha, A. Olivereau, C. Janneteau</div>
+    </div>
+ </div>
+</section>
+
+<footer>Generated with GitHub Pages · Last updated 06.2026 · Aymen Boudguiga</footer>
+
+<script>
+  function toggleTheme() {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }
+  // Restore preference on load
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.classList.add('dark');
+  }
+
+  function showTab(id, btn) {
+    document.querySelectorAll('.pub-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.pub-tab').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
